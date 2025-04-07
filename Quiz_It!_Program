@@ -13,7 +13,7 @@ title_label = tk.Label(window, text="Welcome to QuizIt!", font=("Comic Sans MS",
 title_label.pack(pady=50)
 
 # Create the window text for "Start Game"
-start_button = tk.Button(window, text="Start Game", font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", relief="raised")
+start_button = tk.Button(window, text="Start Game", font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", relief="raised", bd=5)
 start_button.pack(pady=20)
 
 # Create the window text for "Exit"
