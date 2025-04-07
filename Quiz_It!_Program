@@ -3,7 +3,9 @@ from tkinter import messagebox
 
 # Function to handle the "Start Game" button
 def start_game():
-
+# Show a loading message after clicking the "Start Game" button
+    loading_label = tk.Label(window, text="Loading Game...", font=("Comic Sans MS", 30, "bold"), fg="#FF6347", bg="#FCE0D6")
+    loading_label.pack(pady=50)
 
 # Set up the main screen window
 window = tk.Tk()
