@@ -80,10 +80,14 @@ def randomize_category(category_box, categories):
 # Start randomizing
 update_category()
 
+# stop the randomization
+window.after(2000, stop_randomizing, category_box, categories)
+
 def stop_randomizing(category_box, categories):
     global randomizing_active
-    randomizing_active = False # Stop durther category updates
+    randomizing_active = False # Stop further category updates
     
+
 
 
     # Function to handle the "Exit" button
