@@ -20,7 +20,12 @@ def show_game_screen():
     # Make the Difficulty Buttons
     easy_button = tk.Button(window, text="Easy", font=("Comic Sans MS", 20, "bold"), bg="#90EE90", fg="#FF6347", relief="raised", bd=5)
     easy_button.pack(pady=10)
+
+    medium_button = tk.Button(window, text="Medium", font=("Comic Sans MS", 20, "bold"), bg="FFFB8F", fg="#FF6347", relief="raised", bd=5)
+    medium_button.pack(pady=10)
+
     
+
 
     # Function to handle the "Exit" button
 def exit_game():
