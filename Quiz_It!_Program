@@ -14,7 +14,7 @@ def exit_game():
     # Ask for confirmation before quiiting the game
     confirm_exit = messagebox.askyesno("Exit Confirmation", "Are you sure you want to exit the game?")
     if confirm_exit:
-        window.quit()
+        window.destroy()
 
 
 # Set up the main screen window
