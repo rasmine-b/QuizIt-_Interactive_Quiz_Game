@@ -59,10 +59,16 @@ def show_random_category():
     category_box.pack(pady=50)
 
     randomize_category(category_box, categories)
-    
+
 def randomize_category(category_box, categories):
     global randomizing_active
     randomizing_active = True # Start the randomization process
+
+    # Function to simulate randomizing through categories
+    def update_category():
+        if randomizing_active:
+            selected_category = random.choice(categories)
+            category_box.config(text=selected_category)
 
 
 
