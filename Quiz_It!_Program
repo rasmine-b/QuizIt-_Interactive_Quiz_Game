@@ -54,7 +54,9 @@ def show_random_category():
     randomizing_label = tk.Label(window, text="Randomizing Category...", font=("Comic Sans MS", 30, "bold"), fg="#FF6347", bg="#FFD8B1")
     randomizing_label.pack(pady=50)
 
-    
+    # Make a box for category display
+    category_box = tk.Label(window, text="...", font=("Comic Sans MS", 50, "bold"), fg="#F88379", bg="#FCE0D6", width=20, height=2, relief="solid")
+    category_box.pack(pady=50)
 
 
 
