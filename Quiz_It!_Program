@@ -90,7 +90,12 @@ def stop_randomizing(category_box, categories):
     # Use the last shown category as the final category
     final_category = category_box.cget("text")
 
+    # Set the final category color and text
+    category_box.config(fg="#FFFFFF", bg="#FFFB8F")
+    category_box.config(text=final_category)
+
     
+        
 
 
 
