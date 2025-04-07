@@ -8,3 +8,6 @@ window.title("QuizIt")
 window.geometry("800x600")
 window.config(bg="#FCE0D6")
 
+# Create the window texts
+title_label = tk.Label(window, text="Welcome to QuizIt!", font=("Comic Sans Ms", 50, "bold"), fg="#F88379", bg="#FCE0D6")
+title_label.pack(pady=50)
