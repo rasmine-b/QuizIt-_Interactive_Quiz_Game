@@ -27,10 +27,13 @@ def show_game_screen():
     hard_button = tk.Button(window, text="Hard", font=("Comic Sans MS", 20, "bold"), bg="FF6347", fg="white", relief="raised", bd=5, command=lambda: set_difficulty("Hard"))
     hard_button.pack(pady=10)
 
+    # Add an exit button to the top right corner
+    exit_button = tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="white", bd=5, command=exit_game)
+    exit_button.place(x=window.winfo_width() -100, y=10 #At the top right corner
+
 def set_difficulty(difficulty):
     # This function is triggered when the user selects a difficulty
     print(f"Difficulty Selected: {difficulty}")
-
 
 
     # Function to handle the "Exit" button
