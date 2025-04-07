@@ -33,7 +33,7 @@ def show_game_screen():
 
     # Add an exit button to the top right corner
     exit_button = tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="white", bd=5, command=exit_game)
-    exit_button.place(x=window.winfo_width() - 100, y=10) # At the right top corner
+    exit_button.place(x=window.winfo_width() - 80, y=10) # At the right top corner
 
 def set_difficulty(difficulty):
     # This function is triggered when the user selects a difficulty
