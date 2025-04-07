@@ -42,6 +42,9 @@ def set_difficulty(difficulty):
     # After a difficulty selection, show a random category
     show_random_category()
 
+    #List of all possible category
+def show_random_category():
+    categories = ["Food and Drinks", "Science", "Geography", "Movies", "Pop Culture", "Literature", "History"]
     
 
 
