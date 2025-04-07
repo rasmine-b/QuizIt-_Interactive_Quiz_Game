@@ -73,8 +73,9 @@ def randomize_category(category_box, categories):
     # Randomize the background color for added effect
     random_color = random.choice(["#FF6347", "#90EE90", "#FFFB8F", "#FCCE0D6", "#F88379"])
     window.config(bg=random_color)
-    
 
+    # Repeat the randomization process every 100ms if still active
+    window.after(100, update_category)
 
     # Function to handle the "Exit" button
 def exit_game():
