@@ -7,6 +7,9 @@ def start_game():
     loading_label = tk.Label(window, text="Loading Game...", font=("Comic Sans MS", 30, "bold"), fg="#FF6347", bg="#FCE0D6")
     loading_label.pack(pady=50)
 
+     # Simulate loading time 
+    window.after(2000, show_game_screen)
+
 # Make a function after clicking "Start Game"
 def show_game_screen():
     # Hide the loading label and the main screen
@@ -14,7 +17,7 @@ def show_game_screen():
         widget.pack_forget() # It removes all widget from the window
 
     # Make a function that ask user to choose difficulty
-    game_label = tk.Label(window, text="Choose Difficulty", font=("Comic Sans MS", 40, "bold"), fg="#8379#", bg="#FCE0D6"
+    game_label = tk.Label(window, text="Choose Difficulty", font=("Comic Sans MS", 40, "bold"), fg="#83799" bg= "#FCE0D6")
     game_label.pack(pady=50)
 
     # Make the Difficulty Buttons
