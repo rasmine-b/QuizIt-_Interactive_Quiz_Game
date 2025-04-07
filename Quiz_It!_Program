@@ -50,6 +50,12 @@ def show_random_category():
     for widget in window.winfo_children():
         widget.pack_forget()
 
+    # Make a text for randomizing categories
+    randomizing_label = tk.Label(window, text="Randomizing Category...", font=("Comic Sans MS", 30, "bold"), fg="#FF6347", bg="#FFD8B1")
+    randomizing_label.pack(pady=50)
+
+    
+
 
 
 
