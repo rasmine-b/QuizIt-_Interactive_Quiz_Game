@@ -14,7 +14,7 @@ def show_game_screen():
         widget.pack_forget() # It removes all widget from the window
 
     # Make a function that ask user to choose difficulty
-    game_label = tk.Label(window, text="Choose Difficulty" font=("Comic Sans MS", 40, "bold"), fg="#8379#", bg="#FCE0D6")
+    game_label = tk.Label(window, text="Choose Difficulty", font=("Comic Sans MS", 40, "bold"), fg="#8379#", bg="#FCE0D6"
     game_label.pack(pady=50)
 
     # Make the Difficulty Buttons
