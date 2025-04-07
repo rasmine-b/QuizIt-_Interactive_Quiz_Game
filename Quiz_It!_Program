@@ -97,7 +97,9 @@ def stop_randomizing(category_box, categories):
     # Add a message to show the category is finalized
     category_label = tk.Label(window, text=f"Final Category: {final_category}", font=("Comic Sans MS", 40, "bold"), fg="#FF6347", bg="#FCE0D6")
     category_label.pack(pady=50)
-        
+    
+    # Add a small delay before the actual quiz
+    window.after(2000, start_quiz)
 
 
 
