@@ -86,6 +86,10 @@ window.after(2000, stop_randomizing, category_box, categories)
 def stop_randomizing(category_box, categories):
     global randomizing_active
     randomizing_active = False # Stop further category updates
+
+    # Use the last shown category as the final category
+    final_category = category_box.cget("text")
+
     
 
 
