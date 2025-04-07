@@ -94,7 +94,9 @@ def stop_randomizing(category_box, categories):
     category_box.config(fg="#FFFFFF", bg="#FFFB8F")
     category_box.config(text=final_category)
 
-    
+    # Add a message to show the category is finalized
+    category_label = tk.Label(window, text=f"Final Category: {final_category}", font=("Comic Sans MS", 40, "bold"), fg="#FF6347", bg="#FCE0D6")
+    category_label.pack(pady=50)
         
 
 
