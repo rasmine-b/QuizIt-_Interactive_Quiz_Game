@@ -45,7 +45,10 @@ def set_difficulty(difficulty):
     #List of all possible category
 def show_random_category():
     categories = ["Food and Drinks", "Science", "Geography", "Movies", "Pop Culture", "Literature", "History"]
-    
+
+    # Hide all existing widgets
+    for widget in window.winfo_children():
+        widget.pack_forget()
 
 
 
