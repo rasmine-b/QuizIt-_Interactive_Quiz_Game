@@ -11,3 +11,9 @@ window.config(bg="#FCE0D6")
 # Create the window texts
 title_label = tk.Label(window, text="Welcome to QuizIt!", font=("Comic Sans Ms", 50, "bold"), fg="#F88379", bg="#FCE0D6")
 title_label.pack(pady=50)
+
+# Create the window text for "Start Game"
+start_button = tk.Button(window, text="Start Game", font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", relief="raised")
+start_button.pack(pady=20)
+
+
