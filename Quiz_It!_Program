@@ -70,18 +70,20 @@ def randomize_category(category_box, categories):
             selected_category = random.choice(categories)
             category_box.config(text=selected_category)
 
-    # Randomize the background color for added effect
-    random_color = random.choice(["#FF6347", "#90EE90", "#FFFB8F", "#FCCE0D6", "#F88379"])
-    window.config(bg=random_color)
+        # Randomize the background color for added effect
+            random_color = random.choice(["#FF6347", "#90EE90", "#FFFB8F", "#FCCE0D6", "#F88379"])
+            window.config(bg=random_color)
 
     # Repeat the randomization process every 100ms if still active
-    window.after(100, update_category)
+            window.after(100, update_category)
+
 
 # Start randomizing
-update_category()
+    update_category()
 
-# stop the randomization
-window.after(2000, stop_randomizing, category_box, categories)
+    # stop the randomization
+
+    window.after(2000, stop_randomizing, category_box, categories)
 
 def stop_randomizing(category_box, categories):
     global randomizing_active
