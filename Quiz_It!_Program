@@ -3,12 +3,13 @@ from tkinter import messagebox
 import random
 
 # Function to handle the "Start Game" button
+# Function to handle the "Start Game" button click
 def start_game():
-# Show a loading message after clicking the "Start Game" button
+    # Show a loading message before going to the main event
     loading_label = tk.Label(window, text="Loading Game...", font=("Comic Sans MS", 30, "bold"), fg="#FF6347", bg="#FCE0D6")
     loading_label.pack(pady=50)
 
-     # Simulate loading time 
+    # Simulate loading time 
     window.after(2000, show_game_screen)
 
 # Make a function after clicking "Start Game"
