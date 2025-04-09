@@ -101,8 +101,8 @@ def stop_randomizing(category_box, categories, difficulty):
     category_label = tk.Label(window, text=f"Final Category: {final_category}", font=("Comic Sans MS", 40, "bold"), fg="#FF6347", bg="#FCE0D6")
     category_label.pack(pady=50)
     
-    # Add a small delay before the actual quiz
-    window.after(2000, start_quiz)
+    # Add a delay before input questions
+    window.after(2000, start_question_input, difficulty, final_category)
 
 def start_question_input(difficulty, category):
     # Ask user to input a question
@@ -128,6 +128,9 @@ def start_question_input(difficulty, category):
         # Confirm the input and show a message
         messagebox.showinfo("Question Added", f"Question: {question}\nChoice: {', '.join(choices)}\Correct_answer: {correct_answer}")
         
+    
+
+
 
 
     # Function to handle the "Exit" button
