@@ -132,6 +132,9 @@ def start_question_input(difficulty, category):
         response = messagebox.askyesno("Continue", "Do you want to add another question?")
         if response:
             show_game_screen() # Go back to difficulty selection
+        else:
+            summarize_quiz(difficulty) # End the quiz maker
+
 def summarize_quiz(difficulty):
     # Summary message 
     summary_message = f"Summary for {difficulty} level:\n\n"
