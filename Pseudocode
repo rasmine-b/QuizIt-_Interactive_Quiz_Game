@@ -10,7 +10,7 @@
 7. # Create a box for the category for the visual randomization effects
 8. # Make a function that randomizes category
 9. # Stop the randomization and show final category
-10. # Work on the questions
-11. # Put timer on every questions
-12. # Make a score box, set a high score and current score
-13. # Make a function that every questions answered, the category randomizer will show again
+10. # Make a function that allow user to input questions, choices and the correct answer
+11. # Make a function that summarize all the questions that made by the user
+12. # Store all the questions to a text file
+
