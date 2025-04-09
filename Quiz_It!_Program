@@ -141,7 +141,8 @@ def summarize_quiz(difficulty):
                     summary_message += f"    {choice}\n"
                 summary_message += f"  Correct Answer: {q['correct_answer']}\n\n"
 
-
+    if not summary_message.strip(): #If no questions were added
+        summary_message = "No questions have been added yet for this level."
                 
 
 
