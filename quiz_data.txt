@@ -1,0 +1,30 @@
+Difficulty Level: Easy
+  Category: Science
+    Question: What is the chemical symbol for water?
+    Choices:
+    a = O2
+    b = CO2
+    c = H2O
+    d = H2
+    Correct Answer: c
+
+Difficulty Level: Medium
+  Category: Literature
+    Question: Who wrote Brave New World, a dystopian novel set in a future society?
+    Choices:
+    a = Aldous Huxley
+    b = George Orwell
+    c = Ray Bradbury
+    d = Kurt Vonnegut
+    Correct Answer: a
+
+Difficulty Level: Hard
+  Category: History
+    Question: What was the name of the first man-made satellite launched into space?
+    Choices:
+    a = Apollo 11
+    b = Sputnik 1
+    c = Voyager 1
+    d = Hubble
+    Correct Answer: b
+
