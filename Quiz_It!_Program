@@ -80,11 +80,7 @@ def randomize_category(category_box, categories, difficulty):
             window.config(bg=random_color)
 
     # Repeat the randomization process every 100ms if still active
-            window.after(100, update_category)
-
-
-# Start randomizing
-    update_category()
+    window.after(100, update_category)
 
     # stop the randomization
 
