@@ -122,7 +122,8 @@ def start_question_input(difficulty, category):
             messagebox.showerror("Invalid Input", "Correct answer must be 'a', 'b', 'c', or 'd'.")
             return
         
-        
+        # Store the question, choices, and correct answer
+        questions_data[difficulty][category].append({"question": question, "choices": choices, "correct_answer": correct_answer})
 
 
     # Function to handle the "Exit" button
