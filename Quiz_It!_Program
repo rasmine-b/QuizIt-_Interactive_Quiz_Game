@@ -128,8 +128,11 @@ def start_question_input(difficulty, category):
         # Confirm the input and show a message
         messagebox.showinfo("Question Added", f"Question: {question}\nChoice: {', '.join(choices)}\Correct_answer: {correct_answer}")
         
-    
-
+def summarize_quiz(difficulty):
+    # Summary message 
+    summary_message = f"Summary for {difficulty} level:\n\n"
+    for category, questions in questions_data[difficulty].items():
+        
 
 
 
