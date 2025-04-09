@@ -132,7 +132,17 @@ def summarize_quiz(difficulty):
     # Summary message 
     summary_message = f"Summary for {difficulty} level:\n\n"
     for category, questions in questions_data[difficulty].items():
-        
+        if questions: # shows categories with questions 
+            summary_message += f"Category: {category}\n"
+            for q in questions:
+                summary_message += f"  Question: {q['question']}\n"
+                summary_message += f"  Choices:\n"
+                for choice in q['choices']:
+                    summary_message += f"    {choice}\n"
+                summary_message += f"  Correct Answer: {q['correct_answer']}\n\n"
+
+
+                
 
 
 
