@@ -135,27 +135,6 @@ def start_question_input(difficulty, category):
         else:
             summarize_quiz(difficulty) # End the quiz maker
 
-def summarize_quiz(difficulty):
-    # Summary message 
-    summary_message = f"Summary for {difficulty} level:\n\n"
-    for category, questions in questions_data[difficulty].items():
-        if questions: # shows categories with questions 
-            summary_message += f"Category: {category}\n"
-            for q in questions:
-                summary_message += f"  Question: {q['question']}\n"
-                summary_message += f"  Choices:\n"
-                for choice in q['choices']:
-                    summary_message += f"    {choice}\n"
-                summary_message += f"  Correct Answer: {q['correct_answer']}\n\n"
-
-    if not summary_message.strip(): #If no questions were added
-        summary_message = "No questions have been added yet for this level."
-
-    # Show the summary
-    messagebox.showinfo(f"{difficulty} Level Quiz Summary", summary_message)
-
-    # After summarizing, go back to the main screen
-    window.after(2000, show_game_screen)
                 
 
 
