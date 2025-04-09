@@ -131,7 +131,7 @@ def start_question_input(difficulty, category):
         # Ask if the user wants to add another question or end 
         response = messagebox.askyesno("Continue", "Do you want to add another question?")
         if response:
-            
+            show_game_screen() # Go back to difficulty selection
 def summarize_quiz(difficulty):
     # Summary message 
     summary_message = f"Summary for {difficulty} level:\n\n"
