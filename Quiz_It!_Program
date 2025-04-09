@@ -141,7 +141,13 @@ def save_quiz_to_file(difficulty):
     filename = f"{difficulty}_level_quiz.txt"
     with open(filename, "w") as file:
         for category, questions in questions_data[difficulty].items():
-            
+            if questions: # Only write the category that have questions
+                file.write(f"Category: {category}\n")
+                for q in questions:
+                    file.write(f"  Question: {q['question']}\n")
+                    file.write(f"  Choices:\n")
+                    for choice in q['choices']:
+                        file.write(f"  Correct Answer: {q['correct_answer']}\n\n")
 
 
     # Function to handle the "Exit" button
