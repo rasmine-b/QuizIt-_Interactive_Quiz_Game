@@ -138,19 +138,11 @@ def start_question_input(difficulty, category):
                 
 def save_quiz_to_file(difficulty):
     # Save all questions to a text file
-    filename = f"{difficulty}_level_quiz.txt"
-    with open(filename, "w") as file:
-        for category, questions in questions_data[difficulty].items():
-            if questions: # Only write the category that have questions
-                file.write(f"Category: {category}\n")
-                for q in questions:
-                    file.write(f"  Question: {q['question']}\n")
-                    file.write(f"  Choices:\n")
-                    for choice in q['choices']:
-                        file.write(f"  Correct Answer: {q['correct_answer']}\n\n")
-
-    messagebox.showinfo(f"{difficulty} Level Quiz", f"Your quiz has been saved to {filename}.") # Shows a message that the questions have been saved
-    window.after(2000, show_game_screen) # Go back to the main screen after saving 
+    with open("quiz_data.txt", "w") as file:
+        for difficulty, categories in questions_data.items():
+            file.write(f"Difficulty Level: {difficulty}\n")
+            for category, questions in categories.items():
+                
 
 # Function to handle the "Exit" button
 def exit_game():
