@@ -150,6 +150,7 @@ def save_quiz_to_file(difficulty):
                         file.write(f"  Correct Answer: {q['correct_answer']}\n\n")
 
 messagebox.showinfo(f"{difficulty} Level Quiz", f"Your quiz has been saved to {filename}.") # Shows a message that the questions have been saved
+window.after(2000, show_game_screen) # Go back to the main screen after saving 
 
 
     # Function to handle the "Exit" button
