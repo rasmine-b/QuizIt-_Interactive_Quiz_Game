@@ -136,7 +136,12 @@ def start_question_input(difficulty, category):
             summarize_quiz(difficulty) # End the quiz maker
 
                 
-
+def save_quiz_to_file(difficulty):
+    # Save all questions to a text file
+    filename = f"{difficulty}_level_quiz.txt"
+    with open(filename, "w") as file:
+        for category, questions in questions_data[difficulty].items():
+            
 
 
     # Function to handle the "Exit" button
