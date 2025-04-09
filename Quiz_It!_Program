@@ -128,6 +128,10 @@ def start_question_input(difficulty, category):
         # Confirm the input and show a message
         messagebox.showinfo("Question Added", f"Question: {question}\nChoice: {', '.join(choices)}\Correct_answer: {correct_answer}")
         
+        # Ask if the user wants to add another question or end 
+        response = messagebox.askyesno("Continue", "Do you want to add another question?")
+        if response:
+            
 def summarize_quiz(difficulty):
     # Summary message 
     summary_message = f"Summary for {difficulty} level:\n\n"
