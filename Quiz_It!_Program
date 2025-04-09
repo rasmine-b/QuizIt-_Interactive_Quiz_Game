@@ -86,7 +86,7 @@ def randomize_category(category_box, categories, difficulty):
 
     window.after(2000, stop_randomizing, category_box, categories)
 
-def stop_randomizing(category_box, categories):
+def stop_randomizing(category_box, categories, difficulty):
     global randomizing_active
     randomizing_active = False # Stop further category updates
 
