@@ -110,7 +110,9 @@ def start_question_input(difficulty, category):
     if question:
         choices = []
         labels = ['a', 'b', 'c', 'd']
-        
+        for i in range (4):
+            choice = simpledialog.askstring("Input", f"Enter choices {labels[i]} =", parent=window)
+            choices.append(f"{labels[i]} = {choice}") 
 
     # Function to handle the "Exit" button
 def exit_game():
