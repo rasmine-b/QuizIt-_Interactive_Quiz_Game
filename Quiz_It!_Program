@@ -106,6 +106,11 @@ def stop_randomizing(category_box, categories, difficulty):
 
 def start_question_input(difficulty, category):
     # Ask user to input a question
+    question = simpledialog.askstring("Input", "Enter your question:", parent=window)
+    if question:
+        choices = []
+        labels = ['a', 'b', 'c', 'd']
+        
 
     # Function to handle the "Exit" button
 def exit_game():
