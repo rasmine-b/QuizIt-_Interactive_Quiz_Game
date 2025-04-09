@@ -48,7 +48,7 @@ def set_difficulty(difficulty):
     show_random_category(difficulty)
 
     #List of all possible category
-def show_random_category():
+def show_random_category(difficulty):
     categories = ["Food and Drinks", "Science", "Geography", "Movies", "Pop Culture", "Literature", "History"]
 
     # Hide all existing widgets
@@ -63,9 +63,9 @@ def show_random_category():
     category_box = tk.Label(window, text="...", font=("Comic Sans MS", 50, "bold"), fg="#F88379", bg="#FCE0D6", width=20, height=2, relief="solid")
     category_box.pack(pady=50)
 
-    randomize_category(category_box, categories)
+    randomize_category(category_box, categories, difficulty)
 
-def randomize_category(category_box, categories):
+def randomize_category(category_box, categories, difficulty):
     global randomizing_active
     randomizing_active = True # Start the randomization process
 
