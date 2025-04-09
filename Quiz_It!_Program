@@ -104,7 +104,8 @@ def stop_randomizing(category_box, categories, difficulty):
     # Add a small delay before the actual quiz
     window.after(2000, start_quiz)
 
-
+def start_question_input(difficulty, category):
+    # Ask user to input a question
 
     # Function to handle the "Exit" button
 def exit_game():
