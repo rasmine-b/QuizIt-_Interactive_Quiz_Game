@@ -146,6 +146,9 @@ def summarize_quiz(difficulty):
 
     # Show the summary
     messagebox.showinfo(f"{difficulty} Level Quiz Summary", summary_message)
+
+    # After summarizing, go back to the main screen
+    window.after(2000, show_game_screen)
                 
 
 
