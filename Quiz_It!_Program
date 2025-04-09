@@ -133,7 +133,7 @@ def start_question_input(difficulty, category):
         if response:
             show_game_screen() # Go back to difficulty selection
         else:
-            summarize_quiz(difficulty) # End the quiz maker
+            save_quiz_to_file(difficulty) # End the quiz maker
 
                 
 def save_quiz_to_file(difficulty):
