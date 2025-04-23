@@ -115,7 +115,8 @@ def start_question_input(difficulty, category):
             choices.append(f"{labels[i]} = {choice}") 
         
         # Ask for the correct answer as either a, b, c, d
-        correct_answer = simpledialog.askstring("Input", "Enter the correct answer (a, b, c, d):", parent=window)
+        choice_summary = "\n".join(choices)
+        correct_answer = simpledialog.askstring("Input", f"Choices:\n{choice_summary}\n\nEnter the correct answer (a, b, c, d):", parent=window)
 
         # Validate the correct answer input
         if correct_answer not in ['a', 'b', 'c', 'd']:
