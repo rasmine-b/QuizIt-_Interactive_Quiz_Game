@@ -164,6 +164,7 @@ def save_quiz_to_file(difficulty):
         
 def show_quiz_menu():
     clear.window()
+    tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     
 
 # Function to handle the "Exit" button
