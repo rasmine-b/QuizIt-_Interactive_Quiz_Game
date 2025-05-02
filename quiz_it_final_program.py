@@ -166,6 +166,11 @@ def show_quiz_menu():
     clear.window()
     tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     
+def choose_category_for_quiz(difficulty):
+    clear.window()
+    available = [cat for cat in questions_data[difficulty] if questions_data[difficulty][cat]]
+    
+        
 
 # Function to handle the "Exit" button
 def exit_game():
