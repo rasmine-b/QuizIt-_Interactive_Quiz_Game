@@ -170,6 +170,10 @@ def show_quiz_menu():
 def choose_category_for_quiz(difficulty):
     clear.window()
     available = [cat for cat in questions_data[difficulty] if questions_data[difficulty][cat]]
+    if not available: 
+        messagebox.showinfo("No questions", "No questions available for this difficulty.")
+        show_quiz_menu()
+        return
     
         
 
