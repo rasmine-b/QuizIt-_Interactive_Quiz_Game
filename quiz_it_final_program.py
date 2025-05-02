@@ -11,6 +11,8 @@ questions_data = {"Easy": {"Food and Drinks": [], "Science": [], "Geography": []
 # Track total number of questions across all difficulties and categories
 original_total_questions = 0
 
+# Global Score
+total_score = {"correct": 0, "total": 0}
 
 # Function to handle the "Start Game" button click
 def start_game():
