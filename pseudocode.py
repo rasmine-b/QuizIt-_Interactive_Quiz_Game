@@ -14,3 +14,11 @@
 11. # Make a function that summarize all the questions that made by the user
 12. # Store all the questions to a text file
 
+# Assignment 10: Create the Quiz program that read the output file of the Quiz Creator. The user will answer the randomly selected question and check if the answer is correct.
+13. # Open and read the quiz file, extracting questions, correct answers, categories, and difficulty levels.
+14. # Create buttons that allow the user to select their desired difficulty level and category for the quiz.
+15. # For each question, display the question text. Ask the user to input their answer.
+16. # If the user's answer matches the correct one, increase the score by 1. If the answer is wrong, show the correct answer.
+17. # After all questions are answered, show the final score and correct answers.
+18. # Ask user again if they want to make another quiz
+19. # End the program
