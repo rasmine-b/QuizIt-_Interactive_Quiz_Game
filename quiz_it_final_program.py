@@ -164,11 +164,13 @@ def save_quiz_to_file(difficulty):
         show_quiz_menu()
         
 def show_quiz_menu():
-    clear.window()
+    for widget in window.winfo_children():
+        widget.pack_forget()
     tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     
 def choose_category_for_quiz(difficulty):
-    clear.window()
+    for widget in window.winfo_children():
+        widget.pack_forget()
     available = [cat for cat in questions_data[difficulty] if questions_data[difficulty][cat]]
     if not available: 
         messagebox.showinfo("No questions", "No questions available for this difficulty.")
