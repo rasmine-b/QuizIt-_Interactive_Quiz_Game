@@ -161,6 +161,7 @@ def save_quiz_to_file(difficulty):
 
     messagebox.showinfo("Quiz Saved", "Your quiz has been saved to quiz_data.txt.")  # Shows a message that the questions have been saved
     if messagebox.askyesno("Take Quiz", "Would you like to take the quiz now?"):
+        show_quiz_menu()
         
 def show_quiz_menu():
     clear.window()
