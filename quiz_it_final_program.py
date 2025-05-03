@@ -205,9 +205,19 @@ def start_quiz(difficulty, category):
                     show_overall_score()
                 else:
                     show_quiz_menu()
+                return
+            quiz = quiz_data[idx[0]]
+            tk.Label(window, text=f"Q{idx[0] + 1}: {quiz['question']}", font=("Comic Sans MS", 22), bg="#FCE0D6", wraplength=700).pack(pady=20)
+            buttons = []
+            for choice in quiz["choices"]:
+                key, val = choice.split(" = ")
+                btn = tk.Button(window, text=choice, font=("Comic Sans MS", 16), width=40, bg="#FFFB8F", fg="#FF6347",
+                                command=lambda k=key: check_answer(k, quiz["correct_answer"], buttons, quiz))
+                buttons.append(btn)
+                btn.pack(pady=5)
         
 
-        def check_answer(selected, correct, btns, question):
+        def check_answer(selected, correct, buttons, question):
             pass
 
 
