@@ -200,6 +200,12 @@ def start_quiz(difficulty, category):
                 total_score["correct"] += score["correct"]
                 total_score["total"] += score["total"]
                 messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
+                all_done = all(not questions_data[d][c] for d in questions_data for c in questions_data[d])
+                if all_done:
+                    show_overall_score()
+                else:
+                    show_quiz_menu()
+                    
 
 
 def show_overall_score():
