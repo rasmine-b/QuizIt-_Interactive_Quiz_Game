@@ -200,6 +200,18 @@ def start_quiz(difficulty, category):
                 total_score["correct"] += score["correct"]
                 total_score["total"] += score["total"]
                 messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
+
+
+def show_overall_score():
+    for widget in window.winfo_children():
+        widget.pack_forget()
+    tk.Label(window, text="Overall Score", font=("Comic Sans MS", 35, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=30)
+    tk.Label(window, text=f"Score: {total_score['correct']} out of {original_total_questions}", font=("Comic Sans MS", 25), fg="#FF6347", bg="#FCE0D6").pack(pady=20)
+    if messagebox.askyesno("Continue", "Would you like to make another quiz?"):
+        start_game()
+    else:
+        window.destroy()
+    
         
 
     
