@@ -224,6 +224,8 @@ def start_quiz(difficulty, category):
                     btn.config(bg="#90EE90", fg="black") # Green for correct
                 elif selected in btn["text"]:
                     btn.config(bg="#FF6347", fg="white") # Red for selected wrong
+                else:
+                    btn.config(bg="#FFFB8F", fg="#FF6347") # Yellow for unselected others
 
 
 def show_overall_score():
