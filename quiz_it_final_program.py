@@ -193,6 +193,15 @@ def start_quiz(difficulty, category):
         idx = [0]
         answered_this_quiz = []
 
+        def show_question():
+            for widget in window.winfo_children():
+                widget.pack_forget()
+            if idx[0] >= len(quiz_data):
+                total_score["correct"] += score["correct"]
+                total_score["total"] += score["total"]
+                messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
+        
+
     
 
 
