@@ -205,7 +205,11 @@ def start_quiz(difficulty, category):
                     show_overall_score()
                 else:
                     show_quiz_menu()
-                    
+        
+
+        def check_answer(selected, correct, btns, question):
+            pass
+
 
 
 def show_overall_score():
