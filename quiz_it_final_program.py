@@ -162,6 +162,10 @@ def show_quiz_menu():
     for widget in window.winfo_children():
         widget.pack_forget()
     tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
+    for level in ["Easy", "Medium", "Hard"]:
+        tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", 
+                  command=lambda d=level: choose_category_for_quiz(d)).pack(pady=10)
+    
     
     
 def choose_category_for_quiz(difficulty):
