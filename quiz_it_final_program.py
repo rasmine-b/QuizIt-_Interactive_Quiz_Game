@@ -165,6 +165,7 @@ def show_quiz_menu():
     for level in ["Easy", "Medium", "Hard"]:
         tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", 
                   command=lambda d=level: choose_category_for_quiz(d)).pack(pady=10)
+    tk.Button(window, text="End Quiz & Show Score", font=("Comic Sans MS", 16, "bold"), bg="#FF6347", fg="white", command=show_overall_score).pack(pady=30)
     
     
     
@@ -246,13 +247,6 @@ def show_overall_score():
         window.destroy()
     
         
-
-    
-
-
-    
-        
-
 # Function to handle the "Exit" button
 def exit_game():
     # Ask for confirmation before quiiting the game
