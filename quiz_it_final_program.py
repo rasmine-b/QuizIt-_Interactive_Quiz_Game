@@ -226,6 +226,10 @@ def start_quiz(difficulty, category):
                     btn.config(bg="#FF6347", fg="white") # Red for selected wrong
                 else:
                     btn.config(bg="#FFFB8F", fg="#FF6347") # Yellow for unselected others
+            if selected == correct:
+                score["correct"] += 1
+            answered_this_quiz.append({"question": question['question'], "correct_answer": correct, "user_answer": selected})
+            quiz_data.pop(idx[0]) # Removed answered question
 
 
 def show_overall_score():
