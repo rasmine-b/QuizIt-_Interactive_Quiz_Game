@@ -160,7 +160,6 @@ def show_quiz_menu():
     tk.Button(window, text="End Quiz & Show Score", font=("Comic Sans MS", 16, "bold"), bg="#FF6347", fg="white", command=show_overall_score).pack(pady=30)
     
     
-    
 def choose_category_for_quiz(difficulty):
     for widget in window.winfo_children():
         widget.pack_forget()
@@ -189,6 +188,7 @@ def start_quiz(difficulty, category):
         def show_question():
             for widget in window.winfo_children():
                 widget.pack_forget()
+            window.config(bg="#FCE0D6") 
             if idx[0] >= len(quiz_data):
                 total_score["correct"] += score["correct"]
                 total_score["total"] += score["total"]
