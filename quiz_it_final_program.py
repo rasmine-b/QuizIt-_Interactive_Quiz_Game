@@ -175,6 +175,10 @@ def choose_category_for_quiz(difficulty):
     if not available: 
         messagebox.showinfo("No questions", "No questions available for this difficulty.")
         show_quiz_menu()
+        return
+    tk.Label(window, text=f"{difficulty} - Choose Category", font=("Comic Sans MS", 30, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
+    for cat in available:
+        tk.Button(window, text=cat, font=("Comic Sans MS", 18, "bold"), bg="#FFFB8F", fg="#FF6347", command=lambda c=cat, d=difficulty:start_quiz(d,c)).pack(pady=5)
         
 def start_quiz(difficulty, category):
     for widget in window.winfo_children():
@@ -188,6 +192,7 @@ def start_quiz(difficulty, category):
         score = {"correct": 0, "total": len(quiz_data)}
         idx = [0]
         answered_this_quiz = []
+
     
 
 
