@@ -175,7 +175,17 @@ def choose_category_for_quiz(difficulty):
     if not available: 
         messagebox.showinfo("No questions", "No questions available for this difficulty.")
         show_quiz_menu()
-        return
+        
+def start_quiz(difficulty, category):
+    for widget in window.winfo_children():
+        widget.pack_forget()
+        quiz_data = questions_data[difficulty][category]
+        if not quiz_data:
+            messagebox.showinfo("No Questions", "No more questions available in this category.")
+            show_quiz_menu()
+    
+
+
     
         
 
