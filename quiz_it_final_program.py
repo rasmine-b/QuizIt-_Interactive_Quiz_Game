@@ -38,16 +38,6 @@ def show_game_screen():
         tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg = color, fg = text_color, relief="raised", bd=5, command=lambda d=level: show_random_category(d)).pack(pady=10)
     tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="#white", bd=5, command=exit_game).pack(pady=20)
 
-    # Add an exit button to the top right corner
-    exit_button = tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="white", bd=5, command=exit_game)
-    exit_button.place(x=window.winfo_width() - 80, y=10) # At the right top corner
-
-def set_difficulty(difficulty):
-    # This function is triggered when the user selects a difficulty
-    print(f"Difficulty Selected: {difficulty}")
-
-    # After a difficulty selection, show a random category
-    show_random_category(difficulty)
 
     #List of all possible category
 def show_random_category(difficulty):

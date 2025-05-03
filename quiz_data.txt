@@ -1,30 +1,30 @@
 Difficulty Level: Easy
-  Category: Science
-    Question: What is the chemical symbol for water?
+  Category: Pop Culture
+    Question: Who is the singer of the hit song "Shake it off"?
     Choices:
-    a = O2
-    b = CO2
-    c = H2O
-    d = H2
-    Correct Answer: c
+    a = Selena Gomez
+    b = Taylor Swift
+    c = Ariana Grande
+    d = Billie Eilish
+    Correct Answer: b
 
 Difficulty Level: Medium
-  Category: Literature
-    Question: Who wrote Brave New World, a dystopian novel set in a future society?
+  Category: Food and Drinks
+    Question: Which country is the origin of the cocktail Mojito?
     Choices:
-    a = Aldous Huxley
-    b = George Orwell
-    c = Ray Bradbury
-    d = Kurt Vonnegut
-    Correct Answer: a
+    a = Brazil
+    b = Spain
+    c = Mexico
+    d = Cuba
+    Correct Answer: d
 
 Difficulty Level: Hard
-  Category: History
-    Question: What was the name of the first man-made satellite launched into space?
+  Category: Food and Drinks
+    Question: Which spice is made from dried flowers?
     Choices:
-    a = Apollo 11
-    b = Sputnik 1
-    c = Voyager 1
-    d = Hubble
+    a = cinnamon
+    b = clove
+    c = nutmeg
+    d = star anise
     Correct Answer: b
 
