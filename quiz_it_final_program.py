@@ -230,6 +230,9 @@ def start_quiz(difficulty, category):
                 score["correct"] += 1
             answered_this_quiz.append({"question": question['question'], "correct_answer": correct, "user_answer": selected})
             quiz_data.pop(idx[0]) # Removed answered question
+            window.after(2000, show_question)
+
+        show_question()
 
 
 def show_overall_score():
