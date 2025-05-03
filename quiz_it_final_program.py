@@ -97,6 +97,7 @@ def stop_randomizing(category_box, categories, difficulty):
     window.after(2000, start_question_input, difficulty, final_category)
 
 def start_question_input(difficulty, category):
+    global original_total_questions
     # Ask user to input a question
     question = simpledialog.askstring("Input", "Enter your question:", parent=window)
     if question:
@@ -117,6 +118,7 @@ def start_question_input(difficulty, category):
         
         # Store the question, choices, and correct answer
         questions_data[difficulty][category].append({"question": question, "choices": choices, "correct_answer": correct_answer})
+        original_total_questions += 1
 
         # Confirm the input and show a message
         messagebox.showinfo("Question Added", f"Question: {question}\nChoice: {', '.join(choices)}\Correct_answer: {correct_answer}")
