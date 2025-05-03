@@ -183,6 +183,11 @@ def start_quiz(difficulty, category):
         if not quiz_data:
             messagebox.showinfo("No Questions", "No more questions available in this category.")
             show_quiz_menu()
+            return
+        
+        score = {"correct": 0, "total": len(quiz_data)}
+        idx = [0]
+        answered_this_quiz = []
     
 
 
