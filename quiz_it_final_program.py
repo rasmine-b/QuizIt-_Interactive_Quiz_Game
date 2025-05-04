@@ -36,7 +36,7 @@ def show_game_screen():
         color = {"Easy": "#90EE90", "Medium": "#FFFB8F", "Hard": "#FF6347"}[level]
         text_color = {"Easy": "#FF6347", "Medium": "#FF6347", "Hard": "white"}[level]
         tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg = color, fg = text_color, relief="raised", bd=5, command=lambda d=level: show_random_category(d)).pack(pady=10)
-    tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="#white", bd=5, command=exit_game).pack(pady=20)
+    tk.Button(window, text="Exit", font=("Comic Sans MS", 15, "bold"), bg="#FF6347", fg="white", bd=5, command=exit_game).pack(pady=20)
 
 
     #List of all possible category
