@@ -28,6 +28,18 @@ def load_saved_questions():
         lines = file.readlines()
         index = 0
 
+        while i < len(lines):
+            line = lines[index].strip()
+
+            if line.startswith("Difficulty Level: "):
+                current_difficulty = line.split(": ")[1]
+            elif line.startswith("Category: "):
+                current_category = line.split(": ")[1]
+            elif line.startswith("Question: "):
+                question = line.split(": ", 1)[1]
+                i += 1
+                i += 1
+
 # Function to handle the "Start Game" button click
 def start_game():
     # Show a loading message before going to the main event
