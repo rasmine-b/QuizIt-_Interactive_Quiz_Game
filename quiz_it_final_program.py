@@ -15,6 +15,10 @@ original_total_questions = 0
 # Global Score
 total_score = {"correct": 0, "total": 0}
 
+# Add a function that saved the last inputted questions
+def load_saved_questions():
+    global original_total_questions
+
 # Function to handle the "Start Game" button click
 def start_game():
     # Show a loading message before going to the main event
