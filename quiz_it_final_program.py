@@ -179,14 +179,14 @@ def save_quiz_to_file(difficulty):
             for category, questions in categories.items():
                 if questions:  # Only write categories that have questions
                     file.write(f"  Category: {category}\n")
-                    for q in questions:
-                        file.write(f"    Question: {q['question']}\n")
+                    for question in questions:
+                        file.write(f"    Question: {question['question']}\n")
                         file.write(f"    Choices:\n")
-                        for choice in q['choices']:
+                        for choice in question['choices']:
                             file.write(f"    {choice}\n")
-                        file.write(f"    Correct Answer: {q['correct_answer']}\n\n")
+                        file.write(f"    Correct Answer: {question['correct_answer']}\n\n")
 
-    messagebox.showinfo("Quiz Saved", "Your quiz has been saved to quiz_data.txt.")  # Shows a message that the questions have been saved
+    messagebox.showinfo("Quiz Saved", "Your quiz has been saved to quiz_data.txt.")  # Shows a message that the question have been saved
     if messagebox.askyesno("Take Quiz", "Would you like to take the quiz now?"):
         show_quiz_menu()
         
