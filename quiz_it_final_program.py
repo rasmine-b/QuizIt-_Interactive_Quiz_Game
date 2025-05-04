@@ -24,11 +24,11 @@ def load_saved_questions():
     current_difficulty = ""
     current_category = ""
 
-    with open("quiz_data.txt", "read") as file:
+    with open("quiz_data.txt", "r") as file:
         lines = file.readlines()
         index = 0
 
-        while i < len(lines):
+        while index < len(lines):
             line = lines[index].strip()
 
             if line.startswith("Difficulty Level: "):
@@ -37,23 +37,23 @@ def load_saved_questions():
                 current_category = line.split(": ")[1]
             elif line.startswith("Question: "):
                 question = line.split(": ", 1)[1]
-                i += 1
-                i += 1
+                index += 1
+                index += 1
                 # Collect choices
                 choices = []
-                while - < len(lines) and lines[index].strip().startswith(('a =', 'b =', 'c =', 'd =')):
+                while index < len(lines) and lines[index].strip().startswith(('a =', 'b =', 'c =', 'd =')):
                     choices.append(lines[index].strip())
-                    i +=1
+                    index +=1
                 # Read correct answer if available
-                if i < len(lines) and lines[i].strip().startswith("Correct Answer:"):
-                    correct_answer = lines[i].strip().split(": ")[1]
+                if index < len(lines) and lines[index].strip().startswith("Correct Answer:"):
+                    correct_answer = lines[index].strip().split(": ")[1]
                     questions_data[current_difficulty][current_category].append({
                         "question": question,
                         "choices": choices,
                         "correct_answer": correct_answer
                     })
                     original_total_questions += 1
-            i += 1
+            index += 1
 # Function to handle the "Start Game" button click
 def start_game():
     # Show a loading message before going to the main event
@@ -309,7 +309,7 @@ if original_total_questions > 0:
     if answer:
         show_quiz_menu()
     else:
-        saved_quiz_button = tk.Button(window, text="Take Saved  Quiz", font=("Comic Sans Ms", 20, "bold"), bg="#F88379", fg="white", relief="raised", bd=5, command=show_quiz_menu)
+        saved_quiz_button = tk.Button(window, text="Take Saved Quiz", font=("Comic Sans MS", 20, "bold"), bg="#F88379", fg="white", relief="raised", bd=5, command=show_quiz_menu)
         saved_quiz_button.pack(pady=10)
 
 # Create the window text for "Exit"
