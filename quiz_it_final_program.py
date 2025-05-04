@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 import random
+import os
 
 # Variables to store questions and categorized by level and category
 questions_data = {"Easy": {"Food and Drinks": [], "Science": [], "Geography": [], "Movies": [], "Pop Culture": [], "Literature": [], "History": []},
