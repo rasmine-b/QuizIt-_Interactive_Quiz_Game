@@ -18,6 +18,8 @@ total_score = {"correct": 0, "total": 0}
 # Add a function that saved the last inputted questions
 def load_saved_questions():
     global original_total_questions
+    if not os.path.exists("quiz_data.txt"):
+        return
 
 # Function to handle the "Start Game" button click
 def start_game():
