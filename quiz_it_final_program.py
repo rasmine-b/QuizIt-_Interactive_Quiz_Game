@@ -44,6 +44,16 @@ def load_saved_questions():
                 while - < len(lines) and lines[index].strip().startswith(('a =', 'b =', 'c =', 'd =')):
                     choices.append(lines[index].strip())
                     i +=1
+                # Read correct answer if available
+                if i < len(lines) and lines[i].strip().startswith("Correct Answer:"):
+                    correct_answer = lines[i].strip().split(": ")[1]
+                    questions_data[current_difficulty][current_category].append({
+                        "question": question,
+                        "choices": choices,
+                        "correct_answer": correct_answer
+                    })
+                    original_total_questions += 1
+            i += 1
 # Function to handle the "Start Game" button click
 def start_game():
     # Show a loading message before going to the main event
