@@ -157,7 +157,7 @@ def show_quiz_menu():
     tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     for level in ["Easy", "Medium", "Hard"]:
         tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", 
-                  command=lambda d=level: choose_category_for_quiz(d)).pack(pady=10)
+                  command=lambda diff=level: choose_category_for_quiz(diff)).pack(pady=10)
     tk.Button(window, text="End Quiz & Show Score", font=("Comic Sans MS", 16, "bold"), bg="#FF6347", fg="white", command=show_overall_score).pack(pady=30)
     
     
@@ -172,7 +172,7 @@ def choose_category_for_quiz(difficulty):
         return
     tk.Label(window, text=f"{difficulty} - Choose Category", font=("Comic Sans MS", 30, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     for cat in available:
-        tk.Button(window, text=cat, font=("Comic Sans MS", 18, "bold"), bg="#FFFB8F", fg="#FF6347", command=lambda c=cat, d=difficulty:start_quiz(d,c)).pack(pady=5)
+        tk.Button(window, text=cat, font=("Comic Sans MS", 18, "bold"), bg="#FFFB8F", fg="#FF6347", command=lambda ct=cat, diff=difficulty:start_quiz(diff,ct)).pack(pady=5)
         
 def start_quiz(difficulty, category):
     for widget in window.winfo_children():
@@ -195,7 +195,7 @@ def start_quiz(difficulty, category):
             total_score["correct"] += score["correct"]
             total_score["total"] += score["total"]
             messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
-            all_done = all(not questions_data[d][c] for d in questions_data for c in questions_data[d])
+            all_done = all(not questions_data[diff][ct] for diff in questions_data for ct in questions_data[diff])
             if all_done:
                 show_overall_score()
             else:
@@ -207,7 +207,7 @@ def start_quiz(difficulty, category):
         for choice in quiz["choices"]:
             key, val = choice.split(" = ")
             btn = tk.Button(window, text=choice, font=("Comic Sans MS", 16), width=40, bg="#FFFB8F", fg="#FF6347",
-                                command=lambda k=key: check_answer(k, quiz["correct_answer"], buttons, quiz))
+                                command=lambda ky=key: check_answer(ky, quiz["correct_answer"], buttons, quiz))
             buttons.append(btn)
             btn.pack(pady=5)
         
