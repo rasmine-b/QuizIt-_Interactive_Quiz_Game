@@ -39,7 +39,11 @@ def load_saved_questions():
                 question = line.split(": ", 1)[1]
                 i += 1
                 i += 1
-
+                # Collect choices
+                choices = []
+                while - < len(lines) and lines[index].strip().startswith(('a =', 'b =', 'c =', 'd =')):
+                    choices.append(lines[index].strip())
+                    i +=1
 # Function to handle the "Start Game" button click
 def start_game():
     # Show a loading message before going to the main event
