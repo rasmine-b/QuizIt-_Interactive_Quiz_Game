@@ -143,9 +143,9 @@ def start_question_input(difficulty, category):
     if question:
         choices = []
         labels = ['a', 'b', 'c', 'd']
-        for i in range (4):
-            choice = simpledialog.askstring("Input", f"Enter choices {labels[i]} =", parent=window)
-            choices.append(f"{labels[i]} = {choice}") 
+        for index in range (4):
+            choice = simpledialog.askstring("Input", f"Enter choices {labels[index]} =", parent=window)
+            choices.append(f"{labels[index]} = {choice}") 
         
         # Ask for the correct answer as either a, b, c, d
         choice_summary = "\n".join(choices)
