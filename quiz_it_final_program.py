@@ -302,6 +302,16 @@ title_label.pack(pady=50)
 start_button = tk.Button(window, text="Start Making a Quiz", font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", relief="raised", bd=5, command=start_game)
 start_button.pack(pady=20)
 
+# Load saved questions (early in your program)
+load_saved_questions()
+if original_total_questions > 0:
+    answer = messagebox.askyesno("Saved Quiz Found", "Would you like to take the saved quiz?")
+    if answer:
+        show_quiz_menu()
+    else:
+        saved_quiz_button = tk.Button(window, text="Take Saved  Quiz", font=("Comic Sans Ms", 20, "bold"), bg="#F88379", fg="white", relief="raised", bd=5, command=show_quiz_menu)
+        saved_quiz_button.pack(pady=10)
+
 # Create the window text for "Exit"
 exit_button = tk.Button(window, text="Exit", font=("Comic Sans MS", 20, "bold"), bg="#90EE90", fg="#FF6347", relief="raised", bd=5, command=exit_game)
 exit_button.pack(pady=20)
