@@ -153,6 +153,7 @@ def save_quiz_to_file(difficulty):
 def show_quiz_menu():
     for widget in window.winfo_children():
         widget.pack_forget()
+    window.config(bg="#FFDAB9")  # Set peach background
     tk.Label(window, text="Take the Quiz", font=("Comic Sans MS", 40, "bold"), fg="#F88379", bg="#FCE0D6").pack(pady=40)
     for level in ["Easy", "Medium", "Hard"]:
         tk.Button(window, text=level, font=("Comic Sans MS", 20, "bold"), bg="#FFFB8F", fg="#FF6347", 
@@ -163,6 +164,7 @@ def show_quiz_menu():
 def choose_category_for_quiz(difficulty):
     for widget in window.winfo_children():
         widget.pack_forget()
+    window.config(bg="#FFDAB9")  # Set peach background
     available = [cat for cat in questions_data[difficulty] if questions_data[difficulty][cat]]
     if not available: 
         messagebox.showinfo("No questions", "No questions available for this difficulty.")
@@ -175,7 +177,6 @@ def choose_category_for_quiz(difficulty):
 def start_quiz(difficulty, category):
     for widget in window.winfo_children():
         widget.pack_forget()
-    
     quiz_data = questions_data[difficulty][category]
     if not quiz_data:
         messagebox.showinfo("No Questions", "No more questions available in this category.")
@@ -189,7 +190,7 @@ def start_quiz(difficulty, category):
     def show_question():
         for widget in window.winfo_children():
             widget.pack_forget()
-        window.config(bg="#FCE0D6") 
+        window.config(bg="#FFDAB9")  # Set peach background
         if idx[0] >= len(quiz_data):
             total_score["correct"] += score["correct"]
             total_score["total"] += score["total"]

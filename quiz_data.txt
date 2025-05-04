@@ -1,30 +1,38 @@
 Difficulty Level: Easy
-  Category: Literature
-    Question: Who wrote Romeo and Juliet?
+  Category: History
+    Question: Who was the first president of the United States?
     Choices:
-    a = Charles Dickens
-    b = Jane Austen
-    c = William Shakespeare
-    d = Mark Twain
+    a = Thomas Jefferson
+    b = Abraham Lincoln
+    c = George Washington
+    d = John Adams
     Correct Answer: c
 
-Difficulty Level: Medium
-  Category: History
-    Question: When did the Berlin Wall fall?
+    Question: Who sicovered America in 1492?
     Choices:
-    a = 1987
-    b = 1989
-    c = 1999
-    d = 1991
+    a = Ferdinand Magellan
+    b = Christopher Columbus
+    c = Marco Polo
+    d = Leif Erikson
+    Correct Answer: b
+
+Difficulty Level: Medium
+  Category: Movies
+    Question: Who directed the film Inception (2010)?
+    Choices:
+    a = Steven Spielberg
+    b = Christopher Nolan
+    c = James Cameron
+    d = Martin Scorsese
     Correct Answer: b
 
 Difficulty Level: Hard
-  Category: Pop Culture
-    Question: What was the original name of the band Queen before they changed it?
+  Category: Geography
+    Question: Which country has the most natural lakes in the world?
     Choices:
-    a = Smile
-    b = The royals
-    c = Silver fox
-    d = Mercury Rising
-    Correct Answer: a
+    a = Russia
+    b = Canada
+    c = Brazil
+    d = United States
+    Correct Answer: b
 
