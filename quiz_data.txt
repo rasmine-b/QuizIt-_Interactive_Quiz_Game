@@ -1,38 +1,30 @@
 Difficulty Level: Easy
-  Category: History
-    Question: Who was the first president of the United States?
+  Category: Science
+    Question: What planet is known as the Red planet?
     Choices:
-    a = Thomas Jefferson
-    b = Abraham Lincoln
-    c = George Washington
-    d = John Adams
+    a = Earth
+    b = Venus
+    c = Mars
+    d = Jupiter
     Correct Answer: c
 
-    Question: Who sicovered America in 1492?
-    Choices:
-    a = Ferdinand Magellan
-    b = Christopher Columbus
-    c = Marco Polo
-    d = Leif Erikson
-    Correct Answer: b
-
 Difficulty Level: Medium
-  Category: Movies
-    Question: Who directed the film Inception (2010)?
+  Category: Literature
+    Question: Who wrote the dystopian novel 1984?
     Choices:
-    a = Steven Spielberg
-    b = Christopher Nolan
-    c = James Cameron
-    d = Martin Scorsese
+    a = Aldous Huxley
+    b = George Orwell
+    c = Ray Bradburry
+    d = Franz Kafka
     Correct Answer: b
 
 Difficulty Level: Hard
-  Category: Geography
-    Question: Which country has the most natural lakes in the world?
+  Category: History
+    Question: What year did the Soviet Union officially dissolve?
     Choices:
-    a = Russia
-    b = Canada
-    c = Brazil
-    d = United States
-    Correct Answer: b
+    a = 1989
+    b = 1990
+    c = 1991
+    d = 1992
+    Correct Answer: c
 

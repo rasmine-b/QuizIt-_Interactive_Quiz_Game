@@ -215,12 +215,12 @@ def start_quiz(difficulty, category):
     def check_answer(selected, correct, buttons, question):
         for btn in buttons:
             btn.config(state="disabled")
-            if correct in btn["text"]:
-                btn.config(bg="#90EE90", fg="black") # Green for correct
-            elif selected in btn["text"]:
-                btn.config(bg="#FF6347", fg="white") # Red for selected wrong
+            if btn["text"].startswith(f"{correct} ="):
+                btn.config(bg="#90EE90", fg="black")  # Green for correct
+            elif btn["text"].startswith(f"{selected} ="):
+                btn.config(bg="#FF6347", fg="white")  # Red for selected wrong
             else:
-                btn.config(bg="#FFFB8F", fg="#FF6347") # Yellow for unselected others
+                btn.config(bg="#FFFB8F", fg="#FF6347")  # Yellow for unselected others
         if selected == correct:
             score["correct"] += 1
         answered_this_quiz.append({"question": question['question'], "correct_answer": correct, "user_answer": selected})
