@@ -20,6 +20,13 @@ def load_saved_questions():
     global original_total_questions
     if not os.path.exists("quiz_data.txt"):
         return
+    
+    current_difficulty = ""
+    current_category = ""
+
+    with open("quiz_data.txt", "read") as file:
+        lines = file.readlines()
+        index = 0
 
 # Function to handle the "Start Game" button click
 def start_game():
