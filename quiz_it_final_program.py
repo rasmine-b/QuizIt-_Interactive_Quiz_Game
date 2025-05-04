@@ -175,57 +175,58 @@ def choose_category_for_quiz(difficulty):
 def start_quiz(difficulty, category):
     for widget in window.winfo_children():
         widget.pack_forget()
-        quiz_data = questions_data[difficulty][category]
-        if not quiz_data:
-            messagebox.showinfo("No Questions", "No more questions available in this category.")
-            show_quiz_menu()
+    
+    quiz_data = questions_data[difficulty][category]
+    if not quiz_data:
+        messagebox.showinfo("No Questions", "No more questions available in this category.")
+        show_quiz_menu()
+        return
+        
+    score = {"correct": 0, "total": len(quiz_data)}
+    idx = [0]
+    answered_this_quiz = []
+
+    def show_question():
+        for widget in window.winfo_children():
+            widget.pack_forget()
+        window.config(bg="#FCE0D6") 
+        if idx[0] >= len(quiz_data):
+            total_score["correct"] += score["correct"]
+            total_score["total"] += score["total"]
+            messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
+            all_done = all(not questions_data[d][c] for d in questions_data for c in questions_data[d])
+            if all_done:
+                show_overall_score()
+            else:
+                show_quiz_menu()
             return
-        
-        score = {"correct": 0, "total": len(quiz_data)}
-        idx = [0]
-        answered_this_quiz = []
-
-        def show_question():
-            for widget in window.winfo_children():
-                widget.pack_forget()
-            window.config(bg="#FCE0D6") 
-            if idx[0] >= len(quiz_data):
-                total_score["correct"] += score["correct"]
-                total_score["total"] += score["total"]
-                messagebox.showinfo("Quiz Completed", f"Finished category: {category} ({difficulty})")
-                all_done = all(not questions_data[d][c] for d in questions_data for c in questions_data[d])
-                if all_done:
-                    show_overall_score()
-                else:
-                    show_quiz_menu()
-                return
-            quiz = quiz_data[idx[0]]
-            tk.Label(window, text=f"Q{idx[0] + 1}: {quiz['question']}", font=("Comic Sans MS", 22), bg="#FCE0D6", wraplength=700).pack(pady=20)
-            buttons = []
-            for choice in quiz["choices"]:
-                key, val = choice.split(" = ")
-                btn = tk.Button(window, text=choice, font=("Comic Sans MS", 16), width=40, bg="#FFFB8F", fg="#FF6347",
+        quiz = quiz_data[idx[0]]
+        tk.Label(window, text=f"Q{idx[0] + 1}: {quiz['question']}", font=("Comic Sans MS", 22), bg="#FCE0D6", wraplength=700).pack(pady=20)
+        buttons = []
+        for choice in quiz["choices"]:
+            key, val = choice.split(" = ")
+            btn = tk.Button(window, text=choice, font=("Comic Sans MS", 16), width=40, bg="#FFFB8F", fg="#FF6347",
                                 command=lambda k=key: check_answer(k, quiz["correct_answer"], buttons, quiz))
-                buttons.append(btn)
-                btn.pack(pady=5)
+            buttons.append(btn)
+            btn.pack(pady=5)
         
 
-        def check_answer(selected, correct, buttons, question):
-            for btn in buttons:
-                btn.config(state="disabled")
-                if correct in btn["text"]:
-                    btn.config(bg="#90EE90", fg="black") # Green for correct
-                elif selected in btn["text"]:
-                    btn.config(bg="#FF6347", fg="white") # Red for selected wrong
-                else:
-                    btn.config(bg="#FFFB8F", fg="#FF6347") # Yellow for unselected others
-            if selected == correct:
-                score["correct"] += 1
-            answered_this_quiz.append({"question": question['question'], "correct_answer": correct, "user_answer": selected})
-            quiz_data.pop(idx[0]) # Removed answered question
-            window.after(2000, show_question)
+    def check_answer(selected, correct, buttons, question):
+        for btn in buttons:
+            btn.config(state="disabled")
+            if correct in btn["text"]:
+                btn.config(bg="#90EE90", fg="black") # Green for correct
+            elif selected in btn["text"]:
+                btn.config(bg="#FF6347", fg="white") # Red for selected wrong
+            else:
+                btn.config(bg="#FFFB8F", fg="#FF6347") # Yellow for unselected others
+        if selected == correct:
+            score["correct"] += 1
+        answered_this_quiz.append({"question": question['question'], "correct_answer": correct, "user_answer": selected})
+        quiz_data.pop(idx[0]) # Removed answered question
+        window.after(2000, show_question)
 
-        show_question()
+    show_question()
 
 
 def show_overall_score():
